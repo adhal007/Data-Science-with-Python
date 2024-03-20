@@ -10,4 +10,8 @@ ehthumbs.db
 
 # readme
 *_readme.md
+
+# log files
 __pycache__
+*.log
+
