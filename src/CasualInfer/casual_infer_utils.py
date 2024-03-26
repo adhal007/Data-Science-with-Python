@@ -324,7 +324,20 @@ class PropensityScoreAnalyzer:
         logger_child.info("Finished calculating statistics on ps matched data") 
         return df_stats
 
-        # raise NotImplementedError()
+    def generate_summary_stats(self, df_matched):
+        """
+        Function to generate summary statistics on the propensity score matched data
+
+        Args: df_matched: pd.DataFrame: propensity score matched data
+
+        Returns: pd.DataFrame: summary statistics
+        """
+        logger_child = self.logger.getChild("generate_summary_stats")
+        logger_child.info("Generating summary statistics on ps matched data") 
+        df_stats = self.calc_stats(df_matched)
+        logger_child.info("Finished generating summary statistics on ps matched data") 
+        return df_stats        
+
 ############## Scratch documentation section ################
     
 ### K-Means vs KNN: ########################################################
